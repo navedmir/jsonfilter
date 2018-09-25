@@ -1,9 +1,15 @@
-const   express = require('express'),
-        router  = express.Router(),
-        requestParser_controller = require('../controllers/requestParser');
+const express = require('express'),
+        router = express.Router(),
+        requestParser_controller = require('../controllers/requestParser'),
+        swaggerUi = require('swagger-ui-express'),
+        swaggerDocument = require('../swagger.json');
 
+
+router.use('/', swaggerUi.serve);
+//handle default get request
+router.get('/', swaggerUi.setup(swaggerDocument));
 
 //handle default json post request 
-router.post('/', requestParser_controller.parseJsonPayload);    
+router.post('/', requestParser_controller.parseJsonPayload);
 
 module.exports = router;

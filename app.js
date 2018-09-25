@@ -9,7 +9,6 @@ const express = require('express'),
 app.use(bodyParser.json());
 app.use('/', index);
 
-
 app.use((err, req, res, next) => {
     // body-parser will set this to 400 if the json is in error
     if (err.status === 400)
