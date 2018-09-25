@@ -26,7 +26,16 @@ src/server/config/config.js
 1.  After the setup is complete, navigate to the app.js file inside the src/server folder 
    run ` node app.js `
 This will start the server
-browse on http://localhost:3000/
+browse on http://localhost:port/
+
+## Endpoints
+1. http://host:port/ 
+    a get request on this will return api documentation
+2. http://host:port/ 
+    post a a valid json request on this endpoint
+
+## Live Demo
+https://jsonparserfilter.herokuapp.com/#/
 
 
 ## Limitations and assumptions
