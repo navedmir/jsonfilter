@@ -7,9 +7,7 @@ const express = require('express'),
 
 router.use('/', swaggerUi.serve);
 //handle default get request
-//router.get('/', swaggerUi.setup(swaggerDocument));
-
-router.get('/', function(req,res){res.send("hi")});
+router.get('/', swaggerUi.setup(swaggerDocument));
 
 //handle default json post request 
 router.post('/', requestParser_controller.parseJsonPayload);
