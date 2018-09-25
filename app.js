@@ -3,10 +3,8 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
     index = require('./routes/index'),
-    appConfig = require('./config/config');
-
-// Instantiate express
-let app = express();
+    appConfig = require('./config/config'),
+    app = express();
 
 app.use(bodyParser.json());
 app.use('/', index);
@@ -23,8 +21,8 @@ app.use((err, req, res, next) => {
 });
 
 // app server started 
-app.listen(appConfig.app.port, () => {
-    console.log('Server is up and running on port numner ' + appConfig.app.port);
+app.listen(process.env.PORT, () => {
+    console.log('Server is up and running on port numner ' + process.env.PORT);
 });
 
 /**
