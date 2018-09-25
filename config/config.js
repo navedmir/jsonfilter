@@ -7,9 +7,16 @@ const dev = {
  }
 };
 
+const production = {
+  app: {
+    port: parseInt(process.env.PORT) || 3000
+  }
+ };
+
 
 const config = {
- dev
+ dev,
+ production
 };
 
 module.exports = config[env];
