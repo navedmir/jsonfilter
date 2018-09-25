@@ -1,0 +1,20 @@
+{
+  "name": "jsonfilter",
+  "version": "1.0.0",
+  "description": "This service will receive json data and will filter and return a response based on certain predefined conditions",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "author": "Naved Mir",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0"
+  }
+}
